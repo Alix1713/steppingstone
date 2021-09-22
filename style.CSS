@@ -1,3 +1,4 @@
+/*I tried to change the .css to lowercase and it wouldn't change? */
 
 :root {
   --light: #BEE5D3;
@@ -19,14 +20,26 @@ h1 {
 }
 
 header {
-  position:sticky;
+  position:sticky; /* I tried making this fixed */
   align-items: space-around;
   padding: 1%;
   background-color: var(--light);
   color: var(--dark);
+  text-shadow: 1px 1px 2px white, 0 0 25px #5B5E83, 0 0 5px #3B5360;
+  border-style: ridge;
+  border-width: 5px;
+  border-color: var(--navlink-color);
+}
+a:link {
   text-decoration: none;
 }
+a:hover {
+  text-decoration: underline;
+}
  /*done above here, don't mess with it */
+
+ /* At one point I realized I was doing both grid and flexbox so I chose grid */
+
  .container {
   display: grid;
   grid-template-columns: 25%, 25%, 25%, 25%;
@@ -46,10 +59,9 @@ h2 {
   display:grid;
   grid-column-start: 1;
   grid-column-end:span 4fr;
-  grid-row: 50%;
   border-style:ridge;
   border-color:var(--dark);
-  border-width: 25px;
+  border-width: 15px;
   background-image: url("back.jpg");
   background-size: cover;
 }
@@ -59,7 +71,7 @@ h2 {
   justify-content: center;
   border-style:ridge;
   border-color:var(--dark);
-  border-width: 10px;
+  border-width: 15px;
   background-image: url("back.jpg");
   background-size: cover;
 }
@@ -74,6 +86,7 @@ h2 {
   background-size: cover;
 }
 
+
 /* this is done dont touch!*/
 footer {
   display: flex;
@@ -83,6 +96,10 @@ footer {
   color: var(--light);
 }
 
-
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #5B5E83;
+  }
+}
 
 
