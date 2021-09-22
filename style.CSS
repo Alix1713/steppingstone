@@ -4,7 +4,7 @@
   --dark:#5B5E83;
   --navlink-color: #3B5360;
  
-} /*done*/
+} 
 
 body {
  
@@ -24,37 +24,29 @@ header {
   padding: 1%;
   background-color: var(--light);
   color: var(--dark);
+  text-decoration: none;
 }
-
-
-/* so at this point I realized I was trying to do BOTH a grid and flex display
- UGHHHHHHHH thats why it wasnt working!!! *throws ducky* */
-.grid {
+ /*done above here, don't mess with it */
+ .container {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 25%, 25%, 25%, 25%;
+  grid-template-rows: 25%, 25%, 25%, 25%;
+  column-gap: 10px;
+  row-gap: 5px;
 }
 
 h2 {
   margin: 50px;
+  text-align:center;
   font-size: 150%;
-  align-items:center;
-  justify-content: space-between;
   border-width: 15px;
-  
-
-}
-
-main {
-  display: flex;
-  flex: 1 1 0;
-  background-color: #FFF9AF;
 }
 
 .box {
-  flex: 1 1 0;
-  flex-direction: row;
-  text-align: center;
-  justify-content: center;
+  display:grid;
+  grid-column-start: 1;
+  grid-column-end:span 4fr;
+  grid-row: 50%;
   border-style:ridge;
   border-color:var(--dark);
   border-width: 25px;
@@ -63,8 +55,6 @@ main {
 }
 
 .box2 {
-  flex: 1 1 0;
-  flex-direction: row;
   text-align: center;
   justify-content: center;
   border-style:ridge;
@@ -75,8 +65,6 @@ main {
 }
 
 .box3 {
-  flex: 1 1 0;
-  flex-flow: wrap;
   text-align: center;
   justify-content: center;
   border-style:ridge;
