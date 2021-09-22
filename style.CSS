@@ -4,26 +4,34 @@
   --dark:#5B5E83;
   --navlink-color: #3B5360;
  
-}
+} /*done*/
 
 body {
-  display: flex;
-  flex-direction: column;
+ 
   line-height: 1;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color:#FFF9AF ;
+  font-size: 20px;
+  background-color:#FFF9AF;
+  background-image: linear-gradient(#faf9f2,#fff9AF)
+}
+h1 {
+  font-size: 400%;
 }
 
 header {
-  display: flex;
-  align-items: center;
+  position:sticky;
+  align-items: space-around;
   padding: 1%;
   background-color: var(--light);
   color: var(--dark);
 }
 
-h1 {
-  font-size: 200%;
+
+/* so at this point I realized I was trying to do BOTH a grid and flex display
+ UGHHHHHHHH thats why it wasnt working!!! *throws ducky* */
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
 }
 
 h2 {
@@ -36,14 +44,6 @@ h2 {
 
 }
 
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  min-width: 300px;
-
-  
-}
-
 main {
   display: flex;
   flex: 1 1 0;
@@ -52,14 +52,41 @@ main {
 
 .box {
   flex: 1 1 0;
+  flex-direction: row;
   text-align: center;
+  justify-content: center;
+  border-style:ridge;
+  border-color:var(--dark);
+  border-width: 25px;
+  background-image: url("back.jpg");
+  background-size: cover;
+}
+
+.box2 {
+  flex: 1 1 0;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
   border-style:ridge;
   border-color:var(--dark);
   border-width: 10px;
-
+  background-image: url("back.jpg");
+  background-size: cover;
 }
 
+.box3 {
+  flex: 1 1 0;
+  flex-flow: wrap;
+  text-align: center;
+  justify-content: center;
+  border-style:ridge;
+  border-color:var(--dark);
+  border-width: 15px;
+  background-image: url("back.jpg");
+  background-size: cover;
+}
 
+/* this is done dont touch!*/
 footer {
   display: flex;
   justify-content: center;
@@ -67,4 +94,7 @@ footer {
   background-color: var(--dark);
   color: var(--light);
 }
+
+
+
 
